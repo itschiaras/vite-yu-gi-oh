@@ -38,7 +38,7 @@ export default {
     mounted() {
         axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php').then((res) => {
             console.log(res.data);
-            this.archetypeOptions = res.data;
+            this.archetypeOptions = res.data
             console.log(this.archetypeOptions)
         })
     }

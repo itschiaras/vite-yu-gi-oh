@@ -33,11 +33,13 @@ export default {
       let options = {}
       let params = {}
       for (let key in store.search) {
+        
         if (store.search[key]) {
-          params[key] = store.search[key]
+          params[key] = store.search[key].archetype_name
+          
         }
       }
-
+      
       if (Object.keys(params).length > 0) {
         options.params = params;
         console.log(options)
