@@ -1,16 +1,21 @@
 <template>
   <HeaderComponent/>
-  <CardList/>
+  <main class="container mt-5 bg-light">
+    <SearchBar/>
+    <CardList/>
+  </main>
+  
 </template>
 
 <script>
   import axios from 'axios';
   import { store } from './assets/data/store';
   import HeaderComponent from './components/HeaderComponent.vue';
+  import SearchBar from './components/SearchBar.vue'
   import CardList from './components/CardList.vue';
   export default {
     name: 'App',
-    components: { HeaderComponent, CardList},
+    components: { HeaderComponent, CardList, SearchBar},
     data() {
       return {
         store
