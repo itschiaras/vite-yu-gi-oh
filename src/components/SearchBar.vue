@@ -9,8 +9,11 @@
                 <option selected value="">Choose...</option>
                 <option :value="archetype.archetype_name" v-for="(archetype, index) in archetypeOptions" :key="index">{{ archetype.archetype_name }}</option>
             </select>
-            <div>
+            <div class="me-2">
                 <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+            <div>
+                <button type="reset" class="btn btn-primary" @click="resetSearch">Reset</button>
             </div>
         </form>
         </div>
@@ -32,6 +35,11 @@ export default {
     },
     methods: {
         setSearch() {
+            this.$emit('searchChange');
+        },
+        resetSearch() {
+            store.search.archetype = '';
+            store.search.fname = '';
             this.$emit('searchChange');
         }
     },
