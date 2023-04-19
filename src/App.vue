@@ -35,9 +35,10 @@ export default {
       for (let key in store.search) {
         
         if (store.search[key]) {
-          params[key] = store.search[key].archetype_name
+          params[key] = store.search[key]
           
         }
+        debugger;
       }
       
       if (Object.keys(params).length > 0) {

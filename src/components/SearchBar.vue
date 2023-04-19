@@ -3,11 +3,11 @@
         <div class="col d-flex justify-content-center ">
             <form class="d-flex w-50" @submit.prevent="setSearch">
             <div class="me-2">
-                <input type="text" class="form-control" id="cardname" placeholder="Search name" v-model.trim="store.search.name">
+                <input type="text" class="form-control" id="cardname" placeholder="Search name" v-model.trim="store.search.fname">
             </div>
             <select class="form-select me-2" id="searchArchetype" v-model="store.search.archetype">
                 <option selected value="">Choose...</option>
-                <option :value="archetype" v-for="(archetype, index) in archetypeOptions" :key="index">{{ archetype.archetype_name }}</option>
+                <option :value="archetype.archetype_name" v-for="(archetype, index) in archetypeOptions" :key="index">{{ archetype.archetype_name }}</option>
             </select>
             <div>
                 <button type="submit" class="btn btn-primary">Search</button>

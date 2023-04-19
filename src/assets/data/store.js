@@ -6,6 +6,6 @@ export const store = reactive({
     endPoint: '',
     search: {
         archetype: '',
-        name: ''
+        fname: ''
     }
 })
